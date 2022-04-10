@@ -1,10 +1,10 @@
 terraform {
-  required_providers {
+    required_providers {
     aws = {
-      source  = "hashicorp/aws"
+      source = "hashicorp/aws"
+      version = "4.9.0"
     }
   }
-  required_version = ">= 0.14.9"
 }
 
 provider "aws" {
@@ -56,7 +56,7 @@ resource "aws_instance" "devops" {
       host = self.public_ip
       type = "ssh"
       user = "ubuntu"
-      private_key = "${file("/home/taufik/Documents/kerja/cilsy/modul/Sekolah Devops/key-pair/taufik_moduldo.pem")}"
+      private_key = "${file("/home/taufik/Documents/kerja/cilsy/modul/Sekolah Devops/taufik_kurikulum_kp.pem")}"
     }
   }
 }

@@ -1,11 +1,20 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.9.0"
+    }
+  }
+}
+
 provider "aws" {
-  access_key = "AKIA5CHGDFVPB3GEAVPJ"
-  secret_key = "lt7foQ/I3m23BY86AbJtAV5Izkv2ZN********"
+  access_key = "AKIA5CHGDFVPGKW2FWGF"
+  secret_key = "*******wxYwinxVgf/hLkrwCKMCF1FM5DQ6k2Kll"
   region = "us-east-2"
 }
 
-resource "aws_s3_bucket" "devops_bucket" {
-  bucket = "devops-cilsy-bucket"
+resource "aws_s3_bucket" "bucket_devops_cilsy" {
+  bucket = "bucket-devops-cilsy"
   acl = "private"
   
   versioning {
@@ -13,6 +22,6 @@ resource "aws_s3_bucket" "devops_bucket" {
   }
 
   tags = {
-    Name = "devops-cilsy-bucket"
+    Name = "bucket-devops-cilsy"
   }
 }

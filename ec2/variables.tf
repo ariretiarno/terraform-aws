@@ -1,21 +1,21 @@
 variable "aws_access_key" {
-    default = "AKIA5CHGDFVPB3GEAVPJ"
+    default = "AKIA5CHGDFVPGKW2FWGF"
 }
 
 variable "aws_secret_key" {
-    default = "lt7foQ/I3m23BY86AbJtAV5Izkv2ZN*******"
+    default = "*******wxYwinxVgf/hLkrwCKMCF1FM5DQ6k2Kll"
 }
 
 variable "region" {
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "availability_zone" {
-    default = "us-east-2a"
+    default = "us-east-1a"
 }
 
 variable "ami" {
-    default = "ami-0b9064170e32bde34"
+    default = "ami-0e472ba40eb589f49"
 }
 
 variable "instance_type" {
@@ -43,11 +43,11 @@ variable "volume_type" {
 }
 
 variable "key_name" {
-    default = "taufik_moduldo"
+    default = "taufik_kurikulum_kp"
 }
 
 variable "vpc_security_group_ids" {
-    default = ["sg-0d08bb22687b02c67"]
+    default = ["sg-0d1878abf7b359496"]
 }
 
 variable "associate_public_ip_address" {

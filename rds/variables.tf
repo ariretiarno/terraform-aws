@@ -1,9 +1,9 @@
 variable "aws_access_key" {
-    default = "AKIA5CHGDFVPB3GEAVPJ"
+    default = "AKIA5CHGDFVPGKW2FWGF"
 }
 
 variable "aws_secret_key" {
-    default = "lt7foQ/I3m23BY86AbJtAV5Izkv2ZNK********"
+    default = "*******wxYwinxVgf/hLkrwCKMCF1FM5DQ6k2Kll"
 }
 
 variable "db_instance" {

@@ -1,21 +1,30 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.9.0"
+    }
+  }
+}
+
 provider "aws" {
   access_key = var.aws_access_key
   secret_key = var.aws_secret_key
   profile = "default"
-  region = "us-east-2"
+  region = "us-east-1"
 }
 
 resource "aws_db_instance" "devops_mysql" {
   allocated_storage           = 20
   storage_type                = "gp2"
-  engine                      = "${var.rds_engine}"
-  engine_version              = "${var.rds_engine_version}"
-  instance_class              = "${var.db_instance}"
-  identifier                  = "${var.rds_identifier}"
-  name                        = "${var.rds_db_name}"
-  username                    = "${var.rds_db_username}"
-  password                    = "${var.rds_db_password}"
-  parameter_group_name        = "${var.rds_parameter_group_name}"
+  engine                      = var.rds_engine
+  engine_version              = var.rds_engine_version
+  instance_class              = var.db_instance
+  identifier                  = var.rds_identifier
+  db_name                     = var.rds_db_name
+  username                    = var.rds_db_username
+  password                    = var.rds_db_password
+  parameter_group_name        = var.rds_parameter_group_name
   allow_major_version_upgrade = true
   auto_minor_version_upgrade  = true
   backup_retention_period     = 35
