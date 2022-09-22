@@ -5,6 +5,13 @@ terraform {
       version = "4.9.0"
     }
   }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "cilsy17"
+    workspaces {
+      name = "terraform-aws-cilsy17"
+    }
+  }
 }
 
 provider "aws" {

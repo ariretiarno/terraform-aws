@@ -1,17 +1,17 @@
 variable "aws_access_key" {
-    default = "AKIA5CHGDFVPGKW2FWGF"
+    default = "AKIA5CHGDFVPNOQPFP7B"
 }
 
 variable "aws_secret_key" {
-    default = "*******wxYwinxVgf/hLkrwCKMCF1FM5DQ6k2Kll"
+    default = "Aso+sr7NSdg1Oq7b2yVO8MFLjBEeTVoBldjg7Ttv"
 }
 
 variable "region" {
-  default = "us-east-1"
+  default = "ap-northeast-2"
 }
 
 variable "availability_zone" {
-    default = "us-east-1a"
+    default = "ap-northeast-2a"
 }
 
 variable "ami" {
@@ -43,11 +43,11 @@ variable "volume_type" {
 }
 
 variable "key_name" {
-    default = "taufik_kurikulum_kp"
+    default = "cilsy-seoul"
 }
 
 variable "vpc_security_group_ids" {
-    default = ["sg-0d1878abf7b359496"]
+    default = ["sg-cd5518af"]
 }
 
 variable "associate_public_ip_address" {
