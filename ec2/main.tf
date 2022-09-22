@@ -52,18 +52,4 @@ resource "aws_instance" "devops" {
     Purpose = var.tags["purpose"]
     Env = var.tags["env"]
   }
-
-  provisioner "remote-exec" {
-    inline = [
-      "sudo apt update && sudo apt upgrade -y",
-      "sudo apt install nginx -y"
-    ]
-
-    connection {
-      host = self.public_ip
-      type = "ssh"
-      user = "ubuntu"
-      private_key = "${file("/home/taufik/Documents/kerja/cilsy/modul/Sekolah Devops/taufik_kurikulum_kp.pem")}"
-    }
-  }
 }
